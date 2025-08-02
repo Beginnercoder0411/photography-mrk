@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+AU+QLD:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Libre Baskerville", serif;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  margin: 20px;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.7;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 400;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  color: #F9F6EE;
+  font-family: "Caveat", cursive;
+}
+
+a:hover,
+a:focus {
+  color: #F3E5AB;
+}
+
+p {
+  font-family: "Caveat", cursive;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/*Logo subtitle*/
+.subtitle {
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+  color: #F9F6EE;
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 1em;
+}
+
+.site-title h1 {
+  color: #F9F6EE;
+  font-family: "Dancing Script", cursive;
+  font-size: 3em;
+}
+
+.article-title {
+  font-size: 1.5rem;
+}
+
+.site-title,
+.subtitle {
+  background: linear-gradient(#94BCD1, #B9C9C9, #A694A5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*======Typography=======*/
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+header {
+  padding: 1em 0;
+  margin-bottom: 6em;
+  text-align: center;
+  width: 100vw;
+}
+
+footer {
+  color: #F9F6EE;
+  text-align: center;
+  padding: 3em 0;
+  margin-top: 250px;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  font-size: 1.2em;
+}
+
+article {
+  position: relative;
+  top: 100px;
+  color: #F9F6EE;
+  max-width: 70%;
+  justify-self: center;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 45px;
+}
+
+.article-heading {
+  justify-self: center;
+  font-size: 3.5em;
+  margin-bottom: 2em;
+  font-family: "Caveat", cursive;
+}
+
+.article-title,
+.article-body,
+.article-ending {
+  margin-top: 2em;
+}
+
+@media (min-width: 675px) {
+  .container-flex {
+    flex-direction: row;
+  }
+}
+/*===Nav===*/
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-top: 1.5em;
+  margin-left: 2em;
+  justify-content: center;
+}
+
+nav a {
+  color: #F9F6EE;
+  font-weight: 700;
+  padding: 0.25em;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #F3E5AB;
+}
+
+@media (max-width: 675px) {
+  nav,
+  .site-title {
+    position: relative;
+    right: 5%;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin: 0.5em 0;
+  }
+  .image-paragraph {
+    display: none;
+  }
+  .article-heading {
+    font-size: 2em;
+  }
+}
+.heading-title::first-letter {
+  font-size: 2.5em;
+  color: goldenrod;
+}
+
+.image-paragraph {
+  position: relative;
+  top: 85px;
+  color: #F9F6EE;
+  font-size: 2.5em;
+  margin: 0 auto;
+  font-family: "Playwrite AU QLD", cursive;
+  letter-spacing: 2px;
+  animation: glowing-text 2s forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes glowing-text {
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+    color: #353935;
+  }
+  75% {
+    opacity: 0.8;
+    color: #94BCD1;
+  }
+  100% {
+    color: #F9F6EE;
+    opacity: 1;
+  }
+}
+.grid-container {
+  position: relative;
+  display: grid;
+  width: 95%;
+  max-width: 1440px;
+  padding: 10px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  grid-auto-flow: dense;
+  margin-bottom: 300px;
+  background: linear-gradient(#C0C0C0, #353935, #353935, #353935);
+}
+
+.grid-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.v-img {
+  grid-row: span 2;
+  border: 2px solid #F9F6EE;
+}
+
+.h-img {
+  grid-column: span 2;
+  border: 2px solid #F9F6EE;
+}
+
+.l-img {
+  grid-row: span 2;
+  grid-column: span 2;
+  border: 2px solid #F9F6EE;
+}
+
+.acevedo {
+  border: 2px solid #F9F6EE;
+}
+
+@media (min-width: 1400px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+  }
+}
+@media (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+}
+.about-section {
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-title {
+  color: #F9F6EE;
+  font-size: 3.5em;
+  margin-bottom: 2em;
+}
+
+.about-paragraph {
+  align-self: center;
+  color: #F9F6EE;
+  max-width: 70%;
+  font-size: 1.6em;
+  line-height: 40px;
+}
+
+.about-image {
+  height: 400px;
+  width: 500px;
+  align-self: center;
+  margin-bottom: 100px;
+}
+
+.about-section h2 {
+  font-family: "Caveat", cursive;
+}
+
+@media (max-width: 675px) {
+  .about-title {
+    font-size: 2em;
+  }
+}/*# sourceMappingURL=photo.css.map */
